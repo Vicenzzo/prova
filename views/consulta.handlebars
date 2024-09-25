@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Tela de Consulta</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each posts}}
+            {{#dataValues}}
+            <tr>
+                <td>
+
+                    {{nome}}
+
+                </td>
+                <td>{{telefone}}
+                </td>
+                <td>
+                    <button class="btn btn-primary" onclick="window.location.href='/editar/{{id}}';">Editar</button>
+
+                    <button class="btn btn-danger" onclick="window.location.href='/excluir/{{id}}';">Excluir</button>
+                </td>
+            </tr>
+            {{/dataValues}}
+            {{/each}}
+        </tbody>
+    </table>
+</div>
